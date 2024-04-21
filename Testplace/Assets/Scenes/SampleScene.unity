@@ -685,29 +685,14 @@ GameObject:
   - component: {fileID: 655197964}
   - component: {fileID: 655197963}
   - component: {fileID: 655197962}
-  - component: {fileID: 655197961}
+  - component: {fileID: 655197966}
   m_Layer: 0
   m_Name: Trigger2
-  m_TagString: Untagged
+  m_TagString: CloseTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &655197961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655197960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6dd31f83c173bf41b9bcf9c8c0dff7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myDoor: {fileID: 1014856409}
-  openTrigger: 0
-  closeTrigger: 1
 --- !u!65 &655197962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -794,6 +779,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1081818240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &655197966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655197960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ceaf6d94aa1664cb955affe4b3c2da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDoor: {fileID: 1014856409}
 --- !u!1 &714807306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1047,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 767754080850587452, guid: dc12297ac30d33740837fee43605efbf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2054767017}
   m_SourcePrefab: {fileID: 100100000, guid: dc12297ac30d33740837fee43605efbf, type: 3}
 --- !u!95 &1014856409 stripped
 Animator:
@@ -1195,7 +1197,7 @@ GameObject:
   - component: {fileID: 1149317736}
   m_Layer: 0
   m_Name: Trigger1
-  m_TagString: Untagged
+  m_TagString: OpenTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1295,12 +1297,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1149317731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6dd31f83c173bf41b9bcf9c8c0dff7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 83666aba8faf7884196b7177a13c63c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myDoor: {fileID: 1014856409}
-  openTrigger: 1
-  closeTrigger: 0
 --- !u!4 &1181201820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8739649097860063121, guid: eb4eb40b8e2985d4a81948181053eb2b,
@@ -1964,6 +1964,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb4eb40b8e2985d4a81948181053eb2b, type: 3}
+--- !u!1 &2054767016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 767754080850587452, guid: dc12297ac30d33740837fee43605efbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014856408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2054767017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054767016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6dd31f83c173bf41b9bcf9c8c0dff7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &461773340045986289
 PrefabInstance:
   m_ObjectHideFlags: 0
