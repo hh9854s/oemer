@@ -9,20 +9,30 @@ public class TriggerDoorController1 : MonoBehaviour
     [SerializeField] private Animator myDoor = null;
     [SerializeField] private bool openTrigger = false;
     [SerializeField] private bool closeTrigger = false;
+    private bool aaa = false;
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("Player"))
         {
+            
             if (openTrigger)
             {
-                myDoor.Play("Opendoor",0,0.0f);
-                gameObject.SetActive(false);
+                if(aaa == false)
+                {
+                    myDoor.Play("Opendoor",0,0.0f);
+                    aaa = true;
+                }
+                
             }
             else if (closeTrigger)
             {
-                myDoor.Play("Closedoor",0,0.0f);
-                gameObject.SetActive(false);
+                if(aaa)
+                {
+                    myDoor.Play("Closedoor", 0, 0.0f);
+                    aaa = false;
+                }
             }
         }
     }
