@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1795344465}
+  rotationSpeed: 50
 --- !u!1001 &371006179
 PrefabInstance:
   m_ObjectHideFlags: 0
